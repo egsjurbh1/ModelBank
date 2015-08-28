@@ -17,13 +17,13 @@ namespace ModelBank
         public MainForm()
         {
             InitializeComponent();
+            bt_GeneBankData.Enabled = false;
         }
 
         int[] length;
         string[] keyvalue;
         int n = 0;
-        
-        ArrayList ay = new ArrayList();
+        const int nLength = 24;
 
         /// <summary>
         /// 功能号选择
@@ -56,7 +56,10 @@ namespace ModelBank
                 l20.Text = "b_moneytype"; tblength20.Text = "1"; l20.ForeColor = Color.ForestGreen; tbvalue20.Text = "0";
                 l21.Text = "b_moneykind"; tblength21.Text = "1"; l21.ForeColor = Color.Red; tbvalue21.Text = " "; tbvalue21.Enabled = false;
                 l22.Text = "b_mac"; tblength22.Text = "8"; l22.ForeColor = Color.Red; tbvalue22.Text = " "; tbvalue22.Enabled = false;
+                l23.Text = "null"; tblength23.Text = "0"; l23.ForeColor = Color.Gray; tbvalue23.Text = " "; tbvalue23.Enabled = false;
+                l24.Text = "null"; tblength24.Text = "0"; l24.ForeColor = Color.Gray; tbvalue24.Text = " "; tbvalue24.Enabled = false;
                 n = 22;
+                bt_GeneBankData.Enabled = true;
             }
         }
 
@@ -67,8 +70,8 @@ namespace ModelBank
         /// <param name="e"></param>
         private void bt_GeneBankData_Click(object sender, EventArgs e)
         {
-            length = new int[n];
-            keyvalue = new string[n];
+            length = new int[nLength];
+            keyvalue = new string[nLength];
             keyvalue[0] = tbvalue1.Text; length[0] = int.Parse(tblength1.Text);
             keyvalue[1] = tbvalue2.Text; length[1] = int.Parse(tblength2.Text);
             keyvalue[2] = tbvalue3.Text; length[2] = int.Parse(tblength3.Text);
@@ -91,6 +94,8 @@ namespace ModelBank
             keyvalue[19] = tbvalue20.Text; length[19] = int.Parse(tblength20.Text);
             keyvalue[20] = tbvalue21.Text; length[20] = int.Parse(tblength21.Text);
             keyvalue[21] = tbvalue22.Text; length[21] = int.Parse(tblength22.Text);
+            keyvalue[22] = tbvalue22.Text; length[22] = int.Parse(tblength23.Text);
+            keyvalue[23] = tbvalue22.Text; length[23] = int.Parse(tblength24.Text);
 
             string s = null;
             //拼buffer
@@ -103,6 +108,7 @@ namespace ModelBank
                 }
                 s = s + keyvalue[i];
             }
+            rtbresultdata.Text = "";
             rtbresultdata.Text = s;
         }
 

@@ -105,6 +105,8 @@
             this.rtbresultdata = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cbb_funcid = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -755,7 +757,7 @@
             // 
             this.rtbresultdata.Location = new System.Drawing.Point(12, 333);
             this.rtbresultdata.Name = "rtbresultdata";
-            this.rtbresultdata.Size = new System.Drawing.Size(810, 55);
+            this.rtbresultdata.Size = new System.Drawing.Size(810, 78);
             this.rtbresultdata.TabIndex = 27;
             this.rtbresultdata.Text = "";
             // 
@@ -768,17 +770,37 @@
             this.cbb_funcid.FormattingEnabled = true;
             this.cbb_funcid.Items.AddRange(new object[] {
             "160303预指定确认"});
-            this.cbb_funcid.Location = new System.Drawing.Point(510, 11);
+            this.cbb_funcid.Location = new System.Drawing.Point(63, 8);
             this.cbb_funcid.Name = "cbb_funcid";
             this.cbb_funcid.Size = new System.Drawing.Size(121, 20);
             this.cbb_funcid.TabIndex = 28;
             this.cbb_funcid.SelectedIndexChanged += new System.EventHandler(this.cbb_funcid_SelectedIndexChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "功能号：";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(708, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 12);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "v0.1.1 bulid150828";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 402);
+            this.ClientSize = new System.Drawing.Size(834, 423);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbb_funcid);
             this.Controls.Add(this.rtbresultdata);
             this.Controls.Add(this.bt_GeneBankData);
@@ -788,6 +810,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -869,6 +892,8 @@
         private System.Windows.Forms.TextBox tblength2;
         private System.Windows.Forms.TextBox tblength1;
         private System.Windows.Forms.ComboBox cbb_funcid;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
