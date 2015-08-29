@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbPara = new System.Windows.Forms.GroupBox();
             this.tblength24 = new System.Windows.Forms.TextBox();
             this.tblength23 = new System.Windows.Forms.TextBox();
             this.tblength22 = new System.Windows.Forms.TextBox();
@@ -53,30 +53,30 @@
             this.tblength3 = new System.Windows.Forms.TextBox();
             this.tblength2 = new System.Windows.Forms.TextBox();
             this.tblength1 = new System.Windows.Forms.TextBox();
-            this.l24 = new System.Windows.Forms.Label();
-            this.l23 = new System.Windows.Forms.Label();
-            this.l22 = new System.Windows.Forms.Label();
-            this.l21 = new System.Windows.Forms.Label();
-            this.l20 = new System.Windows.Forms.Label();
-            this.l19 = new System.Windows.Forms.Label();
-            this.l18 = new System.Windows.Forms.Label();
-            this.l17 = new System.Windows.Forms.Label();
-            this.l16 = new System.Windows.Forms.Label();
-            this.l15 = new System.Windows.Forms.Label();
-            this.l14 = new System.Windows.Forms.Label();
-            this.l13 = new System.Windows.Forms.Label();
-            this.l12 = new System.Windows.Forms.Label();
-            this.l11 = new System.Windows.Forms.Label();
-            this.l10 = new System.Windows.Forms.Label();
-            this.l9 = new System.Windows.Forms.Label();
-            this.l8 = new System.Windows.Forms.Label();
-            this.l7 = new System.Windows.Forms.Label();
-            this.l6 = new System.Windows.Forms.Label();
-            this.l5 = new System.Windows.Forms.Label();
-            this.l4 = new System.Windows.Forms.Label();
-            this.l3 = new System.Windows.Forms.Label();
-            this.l2 = new System.Windows.Forms.Label();
-            this.l1 = new System.Windows.Forms.Label();
+            this.lbpara24 = new System.Windows.Forms.Label();
+            this.lbpara23 = new System.Windows.Forms.Label();
+            this.lbpara22 = new System.Windows.Forms.Label();
+            this.lbpara21 = new System.Windows.Forms.Label();
+            this.lbpara20 = new System.Windows.Forms.Label();
+            this.lbpara19 = new System.Windows.Forms.Label();
+            this.lbpara18 = new System.Windows.Forms.Label();
+            this.lbpara17 = new System.Windows.Forms.Label();
+            this.lbpara16 = new System.Windows.Forms.Label();
+            this.lbpara15 = new System.Windows.Forms.Label();
+            this.lbpara14 = new System.Windows.Forms.Label();
+            this.lbpara13 = new System.Windows.Forms.Label();
+            this.lbpara12 = new System.Windows.Forms.Label();
+            this.lbpara11 = new System.Windows.Forms.Label();
+            this.lbpara10 = new System.Windows.Forms.Label();
+            this.lbpara9 = new System.Windows.Forms.Label();
+            this.lbpara8 = new System.Windows.Forms.Label();
+            this.lbpara7 = new System.Windows.Forms.Label();
+            this.lbpara6 = new System.Windows.Forms.Label();
+            this.lbpara5 = new System.Windows.Forms.Label();
+            this.lbpara4 = new System.Windows.Forms.Label();
+            this.lbpara3 = new System.Windows.Forms.Label();
+            this.lbpara2 = new System.Windows.Forms.Label();
+            this.lbpara1 = new System.Windows.Forms.Label();
             this.tbvalue24 = new System.Windows.Forms.TextBox();
             this.tbvalue23 = new System.Windows.Forms.TextBox();
             this.tbvalue22 = new System.Windows.Forms.TextBox();
@@ -103,93 +103,96 @@
             this.tbvalue1 = new System.Windows.Forms.TextBox();
             this.bt_GeneBankData = new System.Windows.Forms.Button();
             this.rtbresultdata = new System.Windows.Forms.RichTextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cbb_funcid = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.lbfuncid = new System.Windows.Forms.Label();
+            this.lbversion = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.sStrp = new System.Windows.Forms.StatusStrip();
+            this.tssLable = new System.Windows.Forms.ToolStripStatusLabel();
+            this.gbPara.SuspendLayout();
+            this.sStrp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbPara
             // 
-            this.groupBox1.Controls.Add(this.tblength24);
-            this.groupBox1.Controls.Add(this.tblength23);
-            this.groupBox1.Controls.Add(this.tblength22);
-            this.groupBox1.Controls.Add(this.tblength21);
-            this.groupBox1.Controls.Add(this.tblength20);
-            this.groupBox1.Controls.Add(this.tblength19);
-            this.groupBox1.Controls.Add(this.tblength18);
-            this.groupBox1.Controls.Add(this.tblength17);
-            this.groupBox1.Controls.Add(this.tblength16);
-            this.groupBox1.Controls.Add(this.tblength15);
-            this.groupBox1.Controls.Add(this.tblength14);
-            this.groupBox1.Controls.Add(this.tblength13);
-            this.groupBox1.Controls.Add(this.tblength12);
-            this.groupBox1.Controls.Add(this.tblength11);
-            this.groupBox1.Controls.Add(this.tblength10);
-            this.groupBox1.Controls.Add(this.tblength9);
-            this.groupBox1.Controls.Add(this.tblength8);
-            this.groupBox1.Controls.Add(this.tblength7);
-            this.groupBox1.Controls.Add(this.tblength6);
-            this.groupBox1.Controls.Add(this.tblength5);
-            this.groupBox1.Controls.Add(this.tblength4);
-            this.groupBox1.Controls.Add(this.tblength3);
-            this.groupBox1.Controls.Add(this.tblength2);
-            this.groupBox1.Controls.Add(this.tblength1);
-            this.groupBox1.Controls.Add(this.l24);
-            this.groupBox1.Controls.Add(this.l23);
-            this.groupBox1.Controls.Add(this.l22);
-            this.groupBox1.Controls.Add(this.l21);
-            this.groupBox1.Controls.Add(this.l20);
-            this.groupBox1.Controls.Add(this.l19);
-            this.groupBox1.Controls.Add(this.l18);
-            this.groupBox1.Controls.Add(this.l17);
-            this.groupBox1.Controls.Add(this.l16);
-            this.groupBox1.Controls.Add(this.l15);
-            this.groupBox1.Controls.Add(this.l14);
-            this.groupBox1.Controls.Add(this.l13);
-            this.groupBox1.Controls.Add(this.l12);
-            this.groupBox1.Controls.Add(this.l11);
-            this.groupBox1.Controls.Add(this.l10);
-            this.groupBox1.Controls.Add(this.l9);
-            this.groupBox1.Controls.Add(this.l8);
-            this.groupBox1.Controls.Add(this.l7);
-            this.groupBox1.Controls.Add(this.l6);
-            this.groupBox1.Controls.Add(this.l5);
-            this.groupBox1.Controls.Add(this.l4);
-            this.groupBox1.Controls.Add(this.l3);
-            this.groupBox1.Controls.Add(this.l2);
-            this.groupBox1.Controls.Add(this.l1);
-            this.groupBox1.Controls.Add(this.tbvalue24);
-            this.groupBox1.Controls.Add(this.tbvalue23);
-            this.groupBox1.Controls.Add(this.tbvalue22);
-            this.groupBox1.Controls.Add(this.tbvalue21);
-            this.groupBox1.Controls.Add(this.tbvalue20);
-            this.groupBox1.Controls.Add(this.tbvalue19);
-            this.groupBox1.Controls.Add(this.tbvalue18);
-            this.groupBox1.Controls.Add(this.tbvalue17);
-            this.groupBox1.Controls.Add(this.tbvalue16);
-            this.groupBox1.Controls.Add(this.tbvalue15);
-            this.groupBox1.Controls.Add(this.tbvalue14);
-            this.groupBox1.Controls.Add(this.tbvalue13);
-            this.groupBox1.Controls.Add(this.tbvalue12);
-            this.groupBox1.Controls.Add(this.tbvalue11);
-            this.groupBox1.Controls.Add(this.tbvalue10);
-            this.groupBox1.Controls.Add(this.tbvalue9);
-            this.groupBox1.Controls.Add(this.tbvalue8);
-            this.groupBox1.Controls.Add(this.tbvalue7);
-            this.groupBox1.Controls.Add(this.tbvalue6);
-            this.groupBox1.Controls.Add(this.tbvalue5);
-            this.groupBox1.Controls.Add(this.tbvalue4);
-            this.groupBox1.Controls.Add(this.tbvalue3);
-            this.groupBox1.Controls.Add(this.tbvalue2);
-            this.groupBox1.Controls.Add(this.tbvalue1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 34);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 262);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "参数";
+            this.gbPara.Controls.Add(this.tblength24);
+            this.gbPara.Controls.Add(this.tblength23);
+            this.gbPara.Controls.Add(this.tblength22);
+            this.gbPara.Controls.Add(this.tblength21);
+            this.gbPara.Controls.Add(this.tblength20);
+            this.gbPara.Controls.Add(this.tblength19);
+            this.gbPara.Controls.Add(this.tblength18);
+            this.gbPara.Controls.Add(this.tblength17);
+            this.gbPara.Controls.Add(this.tblength16);
+            this.gbPara.Controls.Add(this.tblength15);
+            this.gbPara.Controls.Add(this.tblength14);
+            this.gbPara.Controls.Add(this.tblength13);
+            this.gbPara.Controls.Add(this.tblength12);
+            this.gbPara.Controls.Add(this.tblength11);
+            this.gbPara.Controls.Add(this.tblength10);
+            this.gbPara.Controls.Add(this.tblength9);
+            this.gbPara.Controls.Add(this.tblength8);
+            this.gbPara.Controls.Add(this.tblength7);
+            this.gbPara.Controls.Add(this.tblength6);
+            this.gbPara.Controls.Add(this.tblength5);
+            this.gbPara.Controls.Add(this.tblength4);
+            this.gbPara.Controls.Add(this.tblength3);
+            this.gbPara.Controls.Add(this.tblength2);
+            this.gbPara.Controls.Add(this.tblength1);
+            this.gbPara.Controls.Add(this.lbpara24);
+            this.gbPara.Controls.Add(this.lbpara23);
+            this.gbPara.Controls.Add(this.lbpara22);
+            this.gbPara.Controls.Add(this.lbpara21);
+            this.gbPara.Controls.Add(this.lbpara20);
+            this.gbPara.Controls.Add(this.lbpara19);
+            this.gbPara.Controls.Add(this.lbpara18);
+            this.gbPara.Controls.Add(this.lbpara17);
+            this.gbPara.Controls.Add(this.lbpara16);
+            this.gbPara.Controls.Add(this.lbpara15);
+            this.gbPara.Controls.Add(this.lbpara14);
+            this.gbPara.Controls.Add(this.lbpara13);
+            this.gbPara.Controls.Add(this.lbpara12);
+            this.gbPara.Controls.Add(this.lbpara11);
+            this.gbPara.Controls.Add(this.lbpara10);
+            this.gbPara.Controls.Add(this.lbpara9);
+            this.gbPara.Controls.Add(this.lbpara8);
+            this.gbPara.Controls.Add(this.lbpara7);
+            this.gbPara.Controls.Add(this.lbpara6);
+            this.gbPara.Controls.Add(this.lbpara5);
+            this.gbPara.Controls.Add(this.lbpara4);
+            this.gbPara.Controls.Add(this.lbpara3);
+            this.gbPara.Controls.Add(this.lbpara2);
+            this.gbPara.Controls.Add(this.lbpara1);
+            this.gbPara.Controls.Add(this.tbvalue24);
+            this.gbPara.Controls.Add(this.tbvalue23);
+            this.gbPara.Controls.Add(this.tbvalue22);
+            this.gbPara.Controls.Add(this.tbvalue21);
+            this.gbPara.Controls.Add(this.tbvalue20);
+            this.gbPara.Controls.Add(this.tbvalue19);
+            this.gbPara.Controls.Add(this.tbvalue18);
+            this.gbPara.Controls.Add(this.tbvalue17);
+            this.gbPara.Controls.Add(this.tbvalue16);
+            this.gbPara.Controls.Add(this.tbvalue15);
+            this.gbPara.Controls.Add(this.tbvalue14);
+            this.gbPara.Controls.Add(this.tbvalue13);
+            this.gbPara.Controls.Add(this.tbvalue12);
+            this.gbPara.Controls.Add(this.tbvalue11);
+            this.gbPara.Controls.Add(this.tbvalue10);
+            this.gbPara.Controls.Add(this.tbvalue9);
+            this.gbPara.Controls.Add(this.tbvalue8);
+            this.gbPara.Controls.Add(this.tbvalue7);
+            this.gbPara.Controls.Add(this.tbvalue6);
+            this.gbPara.Controls.Add(this.tbvalue5);
+            this.gbPara.Controls.Add(this.tbvalue4);
+            this.gbPara.Controls.Add(this.tbvalue3);
+            this.gbPara.Controls.Add(this.tbvalue2);
+            this.gbPara.Controls.Add(this.tbvalue1);
+            this.gbPara.Location = new System.Drawing.Point(12, 34);
+            this.gbPara.Name = "gbPara";
+            this.gbPara.Size = new System.Drawing.Size(810, 262);
+            this.gbPara.TabIndex = 23;
+            this.gbPara.TabStop = false;
+            this.gbPara.Text = "参数";
             // 
             // tblength24
             // 
@@ -359,221 +362,221 @@
             this.tblength1.Size = new System.Drawing.Size(33, 21);
             this.tblength1.TabIndex = 48;
             // 
-            // l24
+            // lbpara24
             // 
-            this.l24.AutoSize = true;
-            this.l24.Location = new System.Drawing.Point(449, 218);
-            this.l24.Name = "l24";
-            this.l24.Size = new System.Drawing.Size(47, 12);
-            this.l24.TabIndex = 47;
-            this.l24.Text = "label24";
+            this.lbpara24.AutoSize = true;
+            this.lbpara24.Location = new System.Drawing.Point(449, 218);
+            this.lbpara24.Name = "lbpara24";
+            this.lbpara24.Size = new System.Drawing.Size(47, 12);
+            this.lbpara24.TabIndex = 47;
+            this.lbpara24.Text = "label24";
             // 
-            // l23
+            // lbpara23
             // 
-            this.l23.AutoSize = true;
-            this.l23.Location = new System.Drawing.Point(449, 191);
-            this.l23.Name = "l23";
-            this.l23.Size = new System.Drawing.Size(47, 12);
-            this.l23.TabIndex = 46;
-            this.l23.Text = "label23";
+            this.lbpara23.AutoSize = true;
+            this.lbpara23.Location = new System.Drawing.Point(449, 191);
+            this.lbpara23.Name = "lbpara23";
+            this.lbpara23.Size = new System.Drawing.Size(47, 12);
+            this.lbpara23.TabIndex = 46;
+            this.lbpara23.Text = "label23";
             // 
-            // l22
+            // lbpara22
             // 
-            this.l22.AutoSize = true;
-            this.l22.Location = new System.Drawing.Point(449, 164);
-            this.l22.Name = "l22";
-            this.l22.Size = new System.Drawing.Size(47, 12);
-            this.l22.TabIndex = 45;
-            this.l22.Text = "label22";
+            this.lbpara22.AutoSize = true;
+            this.lbpara22.Location = new System.Drawing.Point(449, 164);
+            this.lbpara22.Name = "lbpara22";
+            this.lbpara22.Size = new System.Drawing.Size(47, 12);
+            this.lbpara22.TabIndex = 45;
+            this.lbpara22.Text = "label22";
             // 
-            // l21
+            // lbpara21
             // 
-            this.l21.AutoSize = true;
-            this.l21.Location = new System.Drawing.Point(449, 137);
-            this.l21.Name = "l21";
-            this.l21.Size = new System.Drawing.Size(47, 12);
-            this.l21.TabIndex = 44;
-            this.l21.Text = "label21";
+            this.lbpara21.AutoSize = true;
+            this.lbpara21.Location = new System.Drawing.Point(449, 137);
+            this.lbpara21.Name = "lbpara21";
+            this.lbpara21.Size = new System.Drawing.Size(47, 12);
+            this.lbpara21.TabIndex = 44;
+            this.lbpara21.Text = "label21";
             // 
-            // l20
+            // lbpara20
             // 
-            this.l20.AutoSize = true;
-            this.l20.Location = new System.Drawing.Point(449, 110);
-            this.l20.Name = "l20";
-            this.l20.Size = new System.Drawing.Size(47, 12);
-            this.l20.TabIndex = 43;
-            this.l20.Text = "label20";
+            this.lbpara20.AutoSize = true;
+            this.lbpara20.Location = new System.Drawing.Point(449, 110);
+            this.lbpara20.Name = "lbpara20";
+            this.lbpara20.Size = new System.Drawing.Size(47, 12);
+            this.lbpara20.TabIndex = 43;
+            this.lbpara20.Text = "label20";
             // 
-            // l19
+            // lbpara19
             // 
-            this.l19.AutoSize = true;
-            this.l19.Location = new System.Drawing.Point(449, 83);
-            this.l19.Name = "l19";
-            this.l19.Size = new System.Drawing.Size(47, 12);
-            this.l19.TabIndex = 42;
-            this.l19.Text = "label19";
+            this.lbpara19.AutoSize = true;
+            this.lbpara19.Location = new System.Drawing.Point(449, 83);
+            this.lbpara19.Name = "lbpara19";
+            this.lbpara19.Size = new System.Drawing.Size(47, 12);
+            this.lbpara19.TabIndex = 42;
+            this.lbpara19.Text = "label19";
             // 
-            // l18
+            // lbpara18
             // 
-            this.l18.AutoSize = true;
-            this.l18.Location = new System.Drawing.Point(449, 56);
-            this.l18.Name = "l18";
-            this.l18.Size = new System.Drawing.Size(47, 12);
-            this.l18.TabIndex = 41;
-            this.l18.Text = "label18";
+            this.lbpara18.AutoSize = true;
+            this.lbpara18.Location = new System.Drawing.Point(449, 56);
+            this.lbpara18.Name = "lbpara18";
+            this.lbpara18.Size = new System.Drawing.Size(47, 12);
+            this.lbpara18.TabIndex = 41;
+            this.lbpara18.Text = "label18";
             // 
-            // l17
+            // lbpara17
             // 
-            this.l17.AutoSize = true;
-            this.l17.Location = new System.Drawing.Point(449, 29);
-            this.l17.Name = "l17";
-            this.l17.Size = new System.Drawing.Size(47, 12);
-            this.l17.TabIndex = 40;
-            this.l17.Text = "label17";
+            this.lbpara17.AutoSize = true;
+            this.lbpara17.Location = new System.Drawing.Point(449, 29);
+            this.lbpara17.Name = "lbpara17";
+            this.lbpara17.Size = new System.Drawing.Size(47, 12);
+            this.lbpara17.TabIndex = 40;
+            this.lbpara17.Text = "label17";
             // 
-            // l16
+            // lbpara16
             // 
-            this.l16.AutoSize = true;
-            this.l16.Location = new System.Drawing.Point(233, 218);
-            this.l16.Name = "l16";
-            this.l16.Size = new System.Drawing.Size(47, 12);
-            this.l16.TabIndex = 39;
-            this.l16.Text = "label16";
+            this.lbpara16.AutoSize = true;
+            this.lbpara16.Location = new System.Drawing.Point(233, 218);
+            this.lbpara16.Name = "lbpara16";
+            this.lbpara16.Size = new System.Drawing.Size(47, 12);
+            this.lbpara16.TabIndex = 39;
+            this.lbpara16.Text = "label16";
             // 
-            // l15
+            // lbpara15
             // 
-            this.l15.AutoSize = true;
-            this.l15.Location = new System.Drawing.Point(233, 191);
-            this.l15.Name = "l15";
-            this.l15.Size = new System.Drawing.Size(47, 12);
-            this.l15.TabIndex = 38;
-            this.l15.Text = "label15";
+            this.lbpara15.AutoSize = true;
+            this.lbpara15.Location = new System.Drawing.Point(233, 191);
+            this.lbpara15.Name = "lbpara15";
+            this.lbpara15.Size = new System.Drawing.Size(47, 12);
+            this.lbpara15.TabIndex = 38;
+            this.lbpara15.Text = "label15";
             // 
-            // l14
+            // lbpara14
             // 
-            this.l14.AutoSize = true;
-            this.l14.Location = new System.Drawing.Point(233, 164);
-            this.l14.Name = "l14";
-            this.l14.Size = new System.Drawing.Size(47, 12);
-            this.l14.TabIndex = 37;
-            this.l14.Text = "label14";
+            this.lbpara14.AutoSize = true;
+            this.lbpara14.Location = new System.Drawing.Point(233, 164);
+            this.lbpara14.Name = "lbpara14";
+            this.lbpara14.Size = new System.Drawing.Size(47, 12);
+            this.lbpara14.TabIndex = 37;
+            this.lbpara14.Text = "label14";
             // 
-            // l13
+            // lbpara13
             // 
-            this.l13.AutoSize = true;
-            this.l13.Location = new System.Drawing.Point(233, 137);
-            this.l13.Name = "l13";
-            this.l13.Size = new System.Drawing.Size(47, 12);
-            this.l13.TabIndex = 36;
-            this.l13.Text = "label13";
+            this.lbpara13.AutoSize = true;
+            this.lbpara13.Location = new System.Drawing.Point(233, 137);
+            this.lbpara13.Name = "lbpara13";
+            this.lbpara13.Size = new System.Drawing.Size(47, 12);
+            this.lbpara13.TabIndex = 36;
+            this.lbpara13.Text = "label13";
             // 
-            // l12
+            // lbpara12
             // 
-            this.l12.AutoSize = true;
-            this.l12.Location = new System.Drawing.Point(233, 110);
-            this.l12.Name = "l12";
-            this.l12.Size = new System.Drawing.Size(47, 12);
-            this.l12.TabIndex = 35;
-            this.l12.Text = "label12";
+            this.lbpara12.AutoSize = true;
+            this.lbpara12.Location = new System.Drawing.Point(233, 110);
+            this.lbpara12.Name = "lbpara12";
+            this.lbpara12.Size = new System.Drawing.Size(47, 12);
+            this.lbpara12.TabIndex = 35;
+            this.lbpara12.Text = "label12";
             // 
-            // l11
+            // lbpara11
             // 
-            this.l11.AutoSize = true;
-            this.l11.Location = new System.Drawing.Point(233, 83);
-            this.l11.Name = "l11";
-            this.l11.Size = new System.Drawing.Size(47, 12);
-            this.l11.TabIndex = 34;
-            this.l11.Text = "label11";
+            this.lbpara11.AutoSize = true;
+            this.lbpara11.Location = new System.Drawing.Point(233, 83);
+            this.lbpara11.Name = "lbpara11";
+            this.lbpara11.Size = new System.Drawing.Size(47, 12);
+            this.lbpara11.TabIndex = 34;
+            this.lbpara11.Text = "label11";
             // 
-            // l10
+            // lbpara10
             // 
-            this.l10.AutoSize = true;
-            this.l10.Location = new System.Drawing.Point(233, 56);
-            this.l10.Name = "l10";
-            this.l10.Size = new System.Drawing.Size(47, 12);
-            this.l10.TabIndex = 33;
-            this.l10.Text = "label10";
+            this.lbpara10.AutoSize = true;
+            this.lbpara10.Location = new System.Drawing.Point(233, 56);
+            this.lbpara10.Name = "lbpara10";
+            this.lbpara10.Size = new System.Drawing.Size(47, 12);
+            this.lbpara10.TabIndex = 33;
+            this.lbpara10.Text = "label10";
             // 
-            // l9
+            // lbpara9
             // 
-            this.l9.AutoSize = true;
-            this.l9.Location = new System.Drawing.Point(233, 29);
-            this.l9.Name = "l9";
-            this.l9.Size = new System.Drawing.Size(41, 12);
-            this.l9.TabIndex = 32;
-            this.l9.Text = "label9";
+            this.lbpara9.AutoSize = true;
+            this.lbpara9.Location = new System.Drawing.Point(233, 29);
+            this.lbpara9.Name = "lbpara9";
+            this.lbpara9.Size = new System.Drawing.Size(41, 12);
+            this.lbpara9.TabIndex = 32;
+            this.lbpara9.Text = "label9";
             // 
-            // l8
+            // lbpara8
             // 
-            this.l8.AutoSize = true;
-            this.l8.Location = new System.Drawing.Point(17, 218);
-            this.l8.Name = "l8";
-            this.l8.Size = new System.Drawing.Size(41, 12);
-            this.l8.TabIndex = 31;
-            this.l8.Text = "label8";
+            this.lbpara8.AutoSize = true;
+            this.lbpara8.Location = new System.Drawing.Point(17, 218);
+            this.lbpara8.Name = "lbpara8";
+            this.lbpara8.Size = new System.Drawing.Size(41, 12);
+            this.lbpara8.TabIndex = 31;
+            this.lbpara8.Text = "label8";
             // 
-            // l7
+            // lbpara7
             // 
-            this.l7.AutoSize = true;
-            this.l7.Location = new System.Drawing.Point(17, 191);
-            this.l7.Name = "l7";
-            this.l7.Size = new System.Drawing.Size(41, 12);
-            this.l7.TabIndex = 30;
-            this.l7.Text = "label7";
+            this.lbpara7.AutoSize = true;
+            this.lbpara7.Location = new System.Drawing.Point(17, 191);
+            this.lbpara7.Name = "lbpara7";
+            this.lbpara7.Size = new System.Drawing.Size(41, 12);
+            this.lbpara7.TabIndex = 30;
+            this.lbpara7.Text = "label7";
             // 
-            // l6
+            // lbpara6
             // 
-            this.l6.AutoSize = true;
-            this.l6.Location = new System.Drawing.Point(17, 164);
-            this.l6.Name = "l6";
-            this.l6.Size = new System.Drawing.Size(41, 12);
-            this.l6.TabIndex = 29;
-            this.l6.Text = "label6";
+            this.lbpara6.AutoSize = true;
+            this.lbpara6.Location = new System.Drawing.Point(17, 164);
+            this.lbpara6.Name = "lbpara6";
+            this.lbpara6.Size = new System.Drawing.Size(41, 12);
+            this.lbpara6.TabIndex = 29;
+            this.lbpara6.Text = "label6";
             // 
-            // l5
+            // lbpara5
             // 
-            this.l5.AutoSize = true;
-            this.l5.Location = new System.Drawing.Point(17, 137);
-            this.l5.Name = "l5";
-            this.l5.Size = new System.Drawing.Size(41, 12);
-            this.l5.TabIndex = 28;
-            this.l5.Text = "label5";
+            this.lbpara5.AutoSize = true;
+            this.lbpara5.Location = new System.Drawing.Point(17, 137);
+            this.lbpara5.Name = "lbpara5";
+            this.lbpara5.Size = new System.Drawing.Size(41, 12);
+            this.lbpara5.TabIndex = 28;
+            this.lbpara5.Text = "label5";
             // 
-            // l4
+            // lbpara4
             // 
-            this.l4.AutoSize = true;
-            this.l4.Location = new System.Drawing.Point(17, 110);
-            this.l4.Name = "l4";
-            this.l4.Size = new System.Drawing.Size(41, 12);
-            this.l4.TabIndex = 27;
-            this.l4.Text = "label4";
+            this.lbpara4.AutoSize = true;
+            this.lbpara4.Location = new System.Drawing.Point(17, 110);
+            this.lbpara4.Name = "lbpara4";
+            this.lbpara4.Size = new System.Drawing.Size(41, 12);
+            this.lbpara4.TabIndex = 27;
+            this.lbpara4.Text = "label4";
             // 
-            // l3
+            // lbpara3
             // 
-            this.l3.AutoSize = true;
-            this.l3.Location = new System.Drawing.Point(17, 83);
-            this.l3.Name = "l3";
-            this.l3.Size = new System.Drawing.Size(41, 12);
-            this.l3.TabIndex = 26;
-            this.l3.Text = "label3";
+            this.lbpara3.AutoSize = true;
+            this.lbpara3.Location = new System.Drawing.Point(17, 83);
+            this.lbpara3.Name = "lbpara3";
+            this.lbpara3.Size = new System.Drawing.Size(41, 12);
+            this.lbpara3.TabIndex = 26;
+            this.lbpara3.Text = "label3";
             // 
-            // l2
+            // lbpara2
             // 
-            this.l2.AutoSize = true;
-            this.l2.Location = new System.Drawing.Point(17, 56);
-            this.l2.Name = "l2";
-            this.l2.Size = new System.Drawing.Size(41, 12);
-            this.l2.TabIndex = 25;
-            this.l2.Text = "label2";
+            this.lbpara2.AutoSize = true;
+            this.lbpara2.Location = new System.Drawing.Point(17, 56);
+            this.lbpara2.Name = "lbpara2";
+            this.lbpara2.Size = new System.Drawing.Size(41, 12);
+            this.lbpara2.TabIndex = 25;
+            this.lbpara2.Text = "label2";
             // 
-            // l1
+            // lbpara1
             // 
-            this.l1.AutoSize = true;
-            this.l1.Location = new System.Drawing.Point(17, 29);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(41, 12);
-            this.l1.TabIndex = 24;
-            this.l1.Text = "label1";
+            this.lbpara1.AutoSize = true;
+            this.lbpara1.Location = new System.Drawing.Point(17, 29);
+            this.lbpara1.Name = "lbpara1";
+            this.lbpara1.Size = new System.Drawing.Size(41, 12);
+            this.lbpara1.TabIndex = 24;
+            this.lbpara1.Text = "label1";
             // 
             // tbvalue24
             // 
@@ -761,87 +764,111 @@
             this.rtbresultdata.TabIndex = 27;
             this.rtbresultdata.Text = "";
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // cbb_funcid
             // 
+            this.cbb_funcid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_funcid.FormattingEnabled = true;
-            this.cbb_funcid.Items.AddRange(new object[] {
-            "160303预指定确认"});
             this.cbb_funcid.Location = new System.Drawing.Point(63, 8);
             this.cbb_funcid.Name = "cbb_funcid";
             this.cbb_funcid.Size = new System.Drawing.Size(121, 20);
             this.cbb_funcid.TabIndex = 28;
             this.cbb_funcid.SelectedIndexChanged += new System.EventHandler(this.cbb_funcid_SelectedIndexChanged);
             // 
-            // label1
+            // lbfuncid
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "功能号：";
+            this.lbfuncid.AutoSize = true;
+            this.lbfuncid.Location = new System.Drawing.Point(10, 11);
+            this.lbfuncid.Name = "lbfuncid";
+            this.lbfuncid.Size = new System.Drawing.Size(53, 12);
+            this.lbfuncid.TabIndex = 29;
+            this.lbfuncid.Text = "功能号：";
             // 
-            // label2
+            // lbversion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(708, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 12);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "v0.1.1 bulid150828";
+            this.lbversion.AutoSize = true;
+            this.lbversion.Location = new System.Drawing.Point(708, 16);
+            this.lbversion.Name = "lbversion";
+            this.lbversion.Size = new System.Drawing.Size(113, 12);
+            this.lbversion.TabIndex = 30;
+            this.lbversion.Text = "v0.3.0 bulid150829";
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(770, 308);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(47, 12);
+            this.lbTotal.TabIndex = 31;
+            this.lbTotal.Text = "lbTotal";
+            // 
+            // sStrp
+            // 
+            this.sStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssLable});
+            this.sStrp.Location = new System.Drawing.Point(0, 416);
+            this.sStrp.Name = "sStrp";
+            this.sStrp.Size = new System.Drawing.Size(834, 22);
+            this.sStrp.TabIndex = 32;
+            this.sStrp.Text = "statusStrip1";
+            // 
+            // tssLable
+            // 
+            this.tssLable.Name = "tssLable";
+            this.tssLable.Size = new System.Drawing.Size(131, 17);
+            this.tssLable.Text = "toolStripStatusLabel1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 423);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(834, 438);
+            this.Controls.Add(this.sStrp);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.lbversion);
+            this.Controls.Add(this.lbfuncid);
             this.Controls.Add(this.cbb_funcid);
             this.Controls.Add(this.rtbresultdata);
             this.Controls.Add(this.bt_GeneBankData);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbPara);
             this.Name = "MainForm";
             this.Text = "ModelBank";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbPara.ResumeLayout(false);
+            this.gbPara.PerformLayout();
+            this.sStrp.ResumeLayout(false);
+            this.sStrp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbPara;
         private System.Windows.Forms.TextBox tbvalue1;
         private System.Windows.Forms.TextBox tbvalue2;
-        private System.Windows.Forms.Label l24;
-        private System.Windows.Forms.Label l23;
-        private System.Windows.Forms.Label l22;
-        private System.Windows.Forms.Label l21;
-        private System.Windows.Forms.Label l20;
-        private System.Windows.Forms.Label l19;
-        private System.Windows.Forms.Label l18;
-        private System.Windows.Forms.Label l17;
-        private System.Windows.Forms.Label l16;
-        private System.Windows.Forms.Label l15;
-        private System.Windows.Forms.Label l14;
-        private System.Windows.Forms.Label l13;
-        private System.Windows.Forms.Label l12;
-        private System.Windows.Forms.Label l11;
-        private System.Windows.Forms.Label l10;
-        private System.Windows.Forms.Label l9;
-        private System.Windows.Forms.Label l8;
-        private System.Windows.Forms.Label l7;
-        private System.Windows.Forms.Label l6;
-        private System.Windows.Forms.Label l5;
-        private System.Windows.Forms.Label l4;
-        private System.Windows.Forms.Label l3;
-        private System.Windows.Forms.Label l2;
-        private System.Windows.Forms.Label l1;
+        private System.Windows.Forms.Label lbpara24;
+        private System.Windows.Forms.Label lbpara23;
+        private System.Windows.Forms.Label lbpara22;
+        private System.Windows.Forms.Label lbpara21;
+        private System.Windows.Forms.Label lbpara20;
+        private System.Windows.Forms.Label lbpara19;
+        private System.Windows.Forms.Label lbpara18;
+        private System.Windows.Forms.Label lbpara17;
+        private System.Windows.Forms.Label lbpara16;
+        private System.Windows.Forms.Label lbpara15;
+        private System.Windows.Forms.Label lbpara14;
+        private System.Windows.Forms.Label lbpara13;
+        private System.Windows.Forms.Label lbpara12;
+        private System.Windows.Forms.Label lbpara11;
+        private System.Windows.Forms.Label lbpara10;
+        private System.Windows.Forms.Label lbpara9;
+        private System.Windows.Forms.Label lbpara8;
+        private System.Windows.Forms.Label lbpara7;
+        private System.Windows.Forms.Label lbpara6;
+        private System.Windows.Forms.Label lbpara5;
+        private System.Windows.Forms.Label lbpara4;
+        private System.Windows.Forms.Label lbpara3;
+        private System.Windows.Forms.Label lbpara2;
+        private System.Windows.Forms.Label lbpara1;
         private System.Windows.Forms.TextBox tbvalue24;
         private System.Windows.Forms.TextBox tbvalue23;
         private System.Windows.Forms.TextBox tbvalue22;
@@ -866,7 +893,6 @@
         private System.Windows.Forms.TextBox tbvalue3;
         private System.Windows.Forms.Button bt_GeneBankData;
         private System.Windows.Forms.RichTextBox rtbresultdata;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox tblength24;
         private System.Windows.Forms.TextBox tblength23;
         private System.Windows.Forms.TextBox tblength22;
@@ -892,8 +918,11 @@
         private System.Windows.Forms.TextBox tblength2;
         private System.Windows.Forms.TextBox tblength1;
         private System.Windows.Forms.ComboBox cbb_funcid;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbfuncid;
+        private System.Windows.Forms.Label lbversion;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.StatusStrip sStrp;
+        private System.Windows.Forms.ToolStripStatusLabel tssLable;
     }
 }
 
