@@ -32,8 +32,8 @@ namespace ModelBank
         {
             InitializeComponent();
             bt_GeneBankData.Enabled = false;
+            btgetdata.Enabled = false;
             //label初始化不显示
-            lbTotal.Text = "";
             tssLable.Text = "";
             init();
             tssLable.Text = "启动成功";
@@ -121,6 +121,7 @@ namespace ModelBank
             int i = 0;
             string sFuncid = "";
             bt_GeneBankData.Enabled = false;
+            btgetdata.Enabled = false;
             tssLable.Text = "";
             tssLable.ForeColor = Color.Black;
 
@@ -200,6 +201,7 @@ namespace ModelBank
                 lb[j].Text = "";
             }
             bt_GeneBankData.Enabled = true;
+            btgetdata.Enabled = true;
             tssLable.Text = "从xml文件导入成功";
             tssLable.ForeColor = Color.ForestGreen;     
         }
@@ -236,10 +238,116 @@ namespace ModelBank
             rtbresultdata.Text = "";    //清空
             rtbresultdata.Text = s;
             //合计
-            lbTotal.Text = s.Length.ToString() + "字节";
-            tssLable.Text = "生成buffer成功";
+            tssLable.Text = "生成buffer成功:" + s.Length.ToString() + "字节"; ;
             tssLable.ForeColor = Color.ForestGreen;
         }
 
+        /// <summary>
+        /// 获取客户数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btgetdata_Click(object sender, EventArgs e)
+        {
+            //数据库连接描述
+            string dbconnect_str = "Data Source=" + tbDataSource.Text + ";" +
+                                    "Initial Catalog=" + tbdbname.Text + ";" +
+                                    "Persist Security Info=True;" +
+                                    "User ID=" + tbdbuserid.Text + ";" +
+                                    "Password=" + tbdbpassword.Text + ";";
+            //连接数据库
+            SqlProcess sp = new SqlProcess();
+            //测试数据库连接
+            if (!sp.ConnectSQL(dbconnect_str))
+            {
+                MessageBox.Show("-10001数据库连接失败！请重新配置。");
+                return;
+            }
+
+            //查找客户信息         
+            DataTable dtResult = new DataTable(); //结果集
+            DataTable dtResult2 = new DataTable(); //结果集2
+            int custid = int.Parse(tbCustid.Text);
+
+            bool bSuccess = getuserdata(custid, dbconnect_str, tbdbname.Text, ref dtResult, ref dtResult2);
+            if(!bSuccess)
+            {
+                MessageBox.Show("-10002未查到客户数据");
+                return;
+            }
+
+            //客户数据写入
+            for(int i = 0; i < Cfg.nParaNum; ++i)
+            {
+                if(lb[i].Text == "b_custname")
+                {
+                    tbv[i].Text = dtResult.Rows[0]["custlname"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_idtype")
+                {
+                    tbv[i].Text = dtResult.Rows[0]["idtype"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_idno")
+                {
+                    tbv[i].Text = dtResult.Rows[0]["idno"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_bankid")
+                {
+                    tbv[i].Text = dtResult.Rows[0]["bankid"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_moneytype")
+                {
+                    tbv[i].Text = dtResult.Rows[0]["moneytype"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_fundid")
+                {
+                    string orgid = dtResult.Rows[0]["orgid"].ToString().Trim();
+                    string fundid = dtResult.Rows[0]["fundid"].ToString().Trim();
+                    string smid = null;
+                    for(int j = 0; j < 10 - fundid.Length; j++)
+                    {
+                        smid = smid + "0";
+                    }
+                    tbv[i].Text = orgid + smid + fundid;
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+                else if (lb[i].Text == "b_custtype")
+                {
+                    tbv[i].Text = dtResult2.Rows[0]["singleflag"].ToString().Trim();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
+
+                tssLable.Text = "导入客户数据成功";
+                tssLable.ForeColor = Color.ForestGreen;
+            }
+        }
+
+        public bool getuserdata(int custid, string dbconnectstr, string dbname, ref DataTable dt1, ref DataTable dt2)
+        {
+            SqlProcess sp = new SqlProcess();
+            string dbtable1 = "..banktranid ";
+            string dbtable2 = "..custbaseinfo ";
+
+            //查客户数据
+            string sql1 = "select custlname,idtype,idno,fundid,moneytype,bankid,orgid from " + dbname + dbtable1 + "where custid=" + custid.ToString();
+            sp.ExecSingleSQL(dbconnectstr, sql1, dt1);
+            //若未查到信息，返回false
+            if (dt1.Rows.Count == 0)
+                return false;
+
+            //查客户类型数据
+            string sql2 = "select singleflag from " + dbname + dbtable2 + "where custid=" + custid.ToString();
+            sp.ExecSingleSQL(dbconnectstr, sql2, dt2);
+            //若未查到信息，返回false
+            if (dt2.Rows.Count == 0)
+                return false;
+
+            return true;
+        }
     }
 }

@@ -106,11 +106,25 @@
             this.cbb_funcid = new System.Windows.Forms.ComboBox();
             this.lbfuncid = new System.Windows.Forms.Label();
             this.lbversion = new System.Windows.Forms.Label();
-            this.lbTotal = new System.Windows.Forms.Label();
             this.sStrp = new System.Windows.Forms.StatusStrip();
             this.tssLable = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gb_dbSet = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbdbpassword = new System.Windows.Forms.TextBox();
+            this.tbdbuserid = new System.Windows.Forms.TextBox();
+            this.tbdbname = new System.Windows.Forms.TextBox();
+            this.tbDataSource = new System.Windows.Forms.TextBox();
+            this.tbCustid = new System.Windows.Forms.TextBox();
+            this.lbcustid = new System.Windows.Forms.Label();
+            this.btgetdata = new System.Windows.Forms.Button();
             this.gbPara.SuspendLayout();
             this.sStrp.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gb_dbSet.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPara
@@ -189,7 +203,7 @@
             this.gbPara.Controls.Add(this.tbvalue1);
             this.gbPara.Location = new System.Drawing.Point(12, 34);
             this.gbPara.Name = "gbPara";
-            this.gbPara.Size = new System.Drawing.Size(810, 262);
+            this.gbPara.Size = new System.Drawing.Size(729, 262);
             this.gbPara.TabIndex = 23;
             this.gbPara.TabStop = false;
             this.gbPara.Text = "参数";
@@ -760,7 +774,7 @@
             // 
             this.rtbresultdata.Location = new System.Drawing.Point(12, 333);
             this.rtbresultdata.Name = "rtbresultdata";
-            this.rtbresultdata.Size = new System.Drawing.Size(810, 78);
+            this.rtbresultdata.Size = new System.Drawing.Size(729, 78);
             this.rtbresultdata.TabIndex = 27;
             this.rtbresultdata.Text = "";
             // 
@@ -786,20 +800,11 @@
             // lbversion
             // 
             this.lbversion.AutoSize = true;
-            this.lbversion.Location = new System.Drawing.Point(708, 16);
+            this.lbversion.Location = new System.Drawing.Point(857, 19);
             this.lbversion.Name = "lbversion";
             this.lbversion.Size = new System.Drawing.Size(113, 12);
             this.lbversion.TabIndex = 30;
-            this.lbversion.Text = "v0.3.0 bulid150829";
-            // 
-            // lbTotal
-            // 
-            this.lbTotal.AutoSize = true;
-            this.lbTotal.Location = new System.Drawing.Point(770, 308);
-            this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(47, 12);
-            this.lbTotal.TabIndex = 31;
-            this.lbTotal.Text = "lbTotal";
+            this.lbversion.Text = "v0.4.0 bulid150901";
             // 
             // sStrp
             // 
@@ -807,7 +812,7 @@
             this.tssLable});
             this.sStrp.Location = new System.Drawing.Point(0, 416);
             this.sStrp.Name = "sStrp";
-            this.sStrp.Size = new System.Drawing.Size(834, 22);
+            this.sStrp.Size = new System.Drawing.Size(982, 22);
             this.sStrp.TabIndex = 32;
             this.sStrp.Text = "statusStrip1";
             // 
@@ -817,13 +822,137 @@
             this.tssLable.Size = new System.Drawing.Size(131, 17);
             this.tssLable.Text = "toolStripStatusLabel1";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btgetdata);
+            this.groupBox1.Controls.Add(this.lbcustid);
+            this.groupBox1.Controls.Add(this.tbCustid);
+            this.groupBox1.Controls.Add(this.gb_dbSet);
+            this.groupBox1.Location = new System.Drawing.Point(747, 34);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(223, 377);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "获取数据";
+            // 
+            // gb_dbSet
+            // 
+            this.gb_dbSet.Controls.Add(this.label4);
+            this.gb_dbSet.Controls.Add(this.label3);
+            this.gb_dbSet.Controls.Add(this.label2);
+            this.gb_dbSet.Controls.Add(this.label1);
+            this.gb_dbSet.Controls.Add(this.tbdbpassword);
+            this.gb_dbSet.Controls.Add(this.tbdbuserid);
+            this.gb_dbSet.Controls.Add(this.tbdbname);
+            this.gb_dbSet.Controls.Add(this.tbDataSource);
+            this.gb_dbSet.Location = new System.Drawing.Point(6, 27);
+            this.gb_dbSet.Name = "gb_dbSet";
+            this.gb_dbSet.Size = new System.Drawing.Size(211, 133);
+            this.gb_dbSet.TabIndex = 1;
+            this.gb_dbSet.TabStop = false;
+            this.gb_dbSet.Text = "数据库配置";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "密码：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "登陆名：";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "数据库名：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "数据库IP：";
+            // 
+            // tbdbpassword
+            // 
+            this.tbdbpassword.Location = new System.Drawing.Point(70, 99);
+            this.tbdbpassword.Name = "tbdbpassword";
+            this.tbdbpassword.Size = new System.Drawing.Size(125, 21);
+            this.tbdbpassword.TabIndex = 3;
+            this.tbdbpassword.Text = "1234567890";
+            // 
+            // tbdbuserid
+            // 
+            this.tbdbuserid.Location = new System.Drawing.Point(70, 72);
+            this.tbdbuserid.Name = "tbdbuserid";
+            this.tbdbuserid.Size = new System.Drawing.Size(125, 21);
+            this.tbdbuserid.TabIndex = 2;
+            this.tbdbuserid.Text = "gjman";
+            // 
+            // tbdbname
+            // 
+            this.tbdbname.Location = new System.Drawing.Point(70, 47);
+            this.tbdbname.Name = "tbdbname";
+            this.tbdbname.Size = new System.Drawing.Size(125, 21);
+            this.tbdbname.TabIndex = 1;
+            this.tbdbname.Text = "run";
+            // 
+            // tbDataSource
+            // 
+            this.tbDataSource.Location = new System.Drawing.Point(70, 20);
+            this.tbDataSource.Name = "tbDataSource";
+            this.tbDataSource.Size = new System.Drawing.Size(125, 21);
+            this.tbDataSource.TabIndex = 0;
+            this.tbDataSource.Text = "10.176.73.19";
+            // 
+            // tbCustid
+            // 
+            this.tbCustid.Location = new System.Drawing.Point(76, 182);
+            this.tbCustid.Name = "tbCustid";
+            this.tbCustid.Size = new System.Drawing.Size(100, 21);
+            this.tbCustid.TabIndex = 2;
+            // 
+            // lbcustid
+            // 
+            this.lbcustid.AutoSize = true;
+            this.lbcustid.Location = new System.Drawing.Point(18, 187);
+            this.lbcustid.Name = "lbcustid";
+            this.lbcustid.Size = new System.Drawing.Size(53, 12);
+            this.lbcustid.TabIndex = 8;
+            this.lbcustid.Text = "custid：";
+            // 
+            // btgetdata
+            // 
+            this.btgetdata.Location = new System.Drawing.Point(37, 218);
+            this.btgetdata.Name = "btgetdata";
+            this.btgetdata.Size = new System.Drawing.Size(139, 23);
+            this.btgetdata.TabIndex = 9;
+            this.btgetdata.Text = "获取客户数据";
+            this.btgetdata.UseVisualStyleBackColor = true;
+            this.btgetdata.Click += new System.EventHandler(this.btgetdata_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 438);
+            this.ClientSize = new System.Drawing.Size(982, 438);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.sStrp);
-            this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.lbversion);
             this.Controls.Add(this.lbfuncid);
             this.Controls.Add(this.cbb_funcid);
@@ -836,6 +965,10 @@
             this.gbPara.PerformLayout();
             this.sStrp.ResumeLayout(false);
             this.sStrp.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gb_dbSet.ResumeLayout(false);
+            this.gb_dbSet.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -920,9 +1053,21 @@
         private System.Windows.Forms.ComboBox cbb_funcid;
         private System.Windows.Forms.Label lbfuncid;
         private System.Windows.Forms.Label lbversion;
-        private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.StatusStrip sStrp;
         private System.Windows.Forms.ToolStripStatusLabel tssLable;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gb_dbSet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbdbpassword;
+        private System.Windows.Forms.TextBox tbdbuserid;
+        private System.Windows.Forms.TextBox tbdbname;
+        private System.Windows.Forms.TextBox tbDataSource;
+        private System.Windows.Forms.Button btgetdata;
+        private System.Windows.Forms.Label lbcustid;
+        private System.Windows.Forms.TextBox tbCustid;
     }
 }
 
