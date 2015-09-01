@@ -170,10 +170,18 @@ namespace ModelBank
                     if (dr[Cfg.sPara[3]].ToString() == "no")
                         lb[i].ForeColor = Color.Red;
                     else if (dr[Cfg.sPara[3]].ToString() == "yes")
+                    {
                         lb[i].ForeColor = Color.Black;
+                        tbv[i].Enabled = false;
+                    }
+                    else if (dr[Cfg.sPara[3]].ToString() == "solid")
+                    {
+                        lb[i].ForeColor = Color.Black;
+                        tbv[i].Enabled = false;
+                    }
                     else
                     {
-                        MessageBox.Show(Cfg.sPara[3].ToString() + "字段配置有误（必须为yes或no");
+                        MessageBox.Show(Cfg.sPara[3].ToString() + "字段配置有误（必须为yes、no或solid");
                         return;
                     }
                     //对日期的特殊处理

@@ -109,6 +109,9 @@
             this.sStrp = new System.Windows.Forms.StatusStrip();
             this.tssLable = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btgetdata = new System.Windows.Forms.Button();
+            this.lbcustid = new System.Windows.Forms.Label();
+            this.tbCustid = new System.Windows.Forms.TextBox();
             this.gb_dbSet = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -118,9 +121,6 @@
             this.tbdbuserid = new System.Windows.Forms.TextBox();
             this.tbdbname = new System.Windows.Forms.TextBox();
             this.tbDataSource = new System.Windows.Forms.TextBox();
-            this.tbCustid = new System.Windows.Forms.TextBox();
-            this.lbcustid = new System.Windows.Forms.Label();
-            this.btgetdata = new System.Windows.Forms.Button();
             this.gbPara.SuspendLayout();
             this.sStrp.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -804,7 +804,7 @@
             this.lbversion.Name = "lbversion";
             this.lbversion.Size = new System.Drawing.Size(113, 12);
             this.lbversion.TabIndex = 30;
-            this.lbversion.Text = "v0.4.0 bulid150901";
+            this.lbversion.Text = "v0.4.1 bulid150901";
             // 
             // sStrp
             // 
@@ -834,6 +834,32 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "获取数据";
+            // 
+            // btgetdata
+            // 
+            this.btgetdata.Location = new System.Drawing.Point(37, 218);
+            this.btgetdata.Name = "btgetdata";
+            this.btgetdata.Size = new System.Drawing.Size(139, 23);
+            this.btgetdata.TabIndex = 9;
+            this.btgetdata.Text = "获取客户数据";
+            this.btgetdata.UseVisualStyleBackColor = true;
+            this.btgetdata.Click += new System.EventHandler(this.btgetdata_Click);
+            // 
+            // lbcustid
+            // 
+            this.lbcustid.AutoSize = true;
+            this.lbcustid.Location = new System.Drawing.Point(18, 187);
+            this.lbcustid.Name = "lbcustid";
+            this.lbcustid.Size = new System.Drawing.Size(53, 12);
+            this.lbcustid.TabIndex = 8;
+            this.lbcustid.Text = "custid：";
+            // 
+            // tbCustid
+            // 
+            this.tbCustid.Location = new System.Drawing.Point(76, 182);
+            this.tbCustid.Name = "tbCustid";
+            this.tbCustid.Size = new System.Drawing.Size(100, 21);
+            this.tbCustid.TabIndex = 2;
             // 
             // gb_dbSet
             // 
@@ -919,32 +945,6 @@
             this.tbDataSource.Size = new System.Drawing.Size(125, 21);
             this.tbDataSource.TabIndex = 0;
             this.tbDataSource.Text = "10.176.73.19";
-            // 
-            // tbCustid
-            // 
-            this.tbCustid.Location = new System.Drawing.Point(76, 182);
-            this.tbCustid.Name = "tbCustid";
-            this.tbCustid.Size = new System.Drawing.Size(100, 21);
-            this.tbCustid.TabIndex = 2;
-            // 
-            // lbcustid
-            // 
-            this.lbcustid.AutoSize = true;
-            this.lbcustid.Location = new System.Drawing.Point(18, 187);
-            this.lbcustid.Name = "lbcustid";
-            this.lbcustid.Size = new System.Drawing.Size(53, 12);
-            this.lbcustid.TabIndex = 8;
-            this.lbcustid.Text = "custid：";
-            // 
-            // btgetdata
-            // 
-            this.btgetdata.Location = new System.Drawing.Point(37, 218);
-            this.btgetdata.Name = "btgetdata";
-            this.btgetdata.Size = new System.Drawing.Size(139, 23);
-            this.btgetdata.TabIndex = 9;
-            this.btgetdata.Text = "获取客户数据";
-            this.btgetdata.UseVisualStyleBackColor = true;
-            this.btgetdata.Click += new System.EventHandler(this.btgetdata_Click);
             // 
             // MainForm
             // 
