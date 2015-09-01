@@ -275,9 +275,10 @@ namespace ModelBank
             //查找客户信息         
             DataTable dtResult = new DataTable(); //结果集
             DataTable dtResult2 = new DataTable(); //结果集2
+            DataTable dtResult3 = new DataTable(); //结果集3
             int custid = int.Parse(tbCustid.Text);
 
-            bool bSuccess = getuserdata(custid, dbconnect_str, tbdbname.Text, ref dtResult, ref dtResult2);
+            bool bSuccess = getuserdata(custid, dbconnect_str, tbdbname.Text, ref dtResult, ref dtResult2, ref dtResult3);
             if(!bSuccess)
             {
                 MessageBox.Show("-10002未查到客户数据");
@@ -329,17 +330,25 @@ namespace ModelBank
                     tbv[i].Text = dtResult2.Rows[0]["singleflag"].ToString().Trim();
                     lb[i].ForeColor = Color.ForestGreen;
                 }
+                else if (lb[i].Text == "b_bksno")
+                {
+                    Random ran = new Random();
+                    int rkey = ran.Next(1000, 9999);
+                    tbv[i].Text = dtResult3.Rows[0]["sno"].ToString().Trim() + rkey.ToString();
+                    lb[i].ForeColor = Color.ForestGreen;
+                }
 
                 tssLable.Text = "导入客户数据成功";
                 tssLable.ForeColor = Color.ForestGreen;
             }
         }
 
-        public bool getuserdata(int custid, string dbconnectstr, string dbname, ref DataTable dt1, ref DataTable dt2)
+        public bool getuserdata(int custid, string dbconnectstr, string dbname, ref DataTable dt1, ref DataTable dt2, ref DataTable dt3)
         {
             SqlProcess sp = new SqlProcess();
             string dbtable1 = "..banktranid ";
             string dbtable2 = "..custbaseinfo ";
+            string dbtable3 = "..logbanktran ";
 
             //查客户数据
             string sql1 = "select custlname,idtype,idno,fundid,moneytype,bankid,orgid from " + dbname + dbtable1 + "where custid=" + custid.ToString();
@@ -353,6 +362,13 @@ namespace ModelBank
             sp.ExecSingleSQL(dbconnectstr, sql2, dt2);
             //若未查到信息，返回false
             if (dt2.Rows.Count == 0)
+                return false;
+
+            //查流水
+            string sql3 = "select sno from " + dbname + dbtable3 + "where custid=" + custid.ToString() + " order by sno desc";
+            sp.ExecSingleSQL(dbconnectstr, sql3, dt3);
+            //若未查到信息，返回false
+            if (dt3.Rows.Count == 0)
                 return false;
 
             return true;
