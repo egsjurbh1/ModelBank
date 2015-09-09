@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Text;
 
 namespace ModelBank
 {
@@ -236,7 +237,8 @@ namespace ModelBank
             //拼buffer
             for (int i = 0; i < Cfg.nParaNum; i++)
             {
-                int oldlength = keyvalue[i].Length;
+                //int oldlength = keyvalue[i].Length; //获取字符长度
+                int oldlength = Encoding.Default.GetByteCount(keyvalue[i]); //获取字符长度修正20150909
                 for (int j = 0; j < (length[i] - oldlength); j++)
                 {
                     keyvalue[i] = keyvalue[i] + " ";

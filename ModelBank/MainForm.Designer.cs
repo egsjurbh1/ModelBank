@@ -804,7 +804,7 @@
             this.lbversion.Name = "lbversion";
             this.lbversion.Size = new System.Drawing.Size(113, 12);
             this.lbversion.TabIndex = 30;
-            this.lbversion.Text = "v0.4.2 bulid150901";
+            this.lbversion.Text = "v0.4.3 bulid150909";
             // 
             // sStrp
             // 
@@ -944,7 +944,7 @@
             this.tbDataSource.Name = "tbDataSource";
             this.tbDataSource.Size = new System.Drawing.Size(125, 21);
             this.tbDataSource.TabIndex = 0;
-            this.tbDataSource.Text = "10.176.73.19";
+            this.tbDataSource.Text = "10.176.73.47";
             // 
             // MainForm
             // 
