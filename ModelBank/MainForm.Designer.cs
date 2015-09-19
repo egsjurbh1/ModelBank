@@ -804,7 +804,7 @@
             this.lbversion.Name = "lbversion";
             this.lbversion.Size = new System.Drawing.Size(113, 12);
             this.lbversion.TabIndex = 30;
-            this.lbversion.Text = "v0.4.3 bulid150909";
+            this.lbversion.Text = "v0.4.4 bulid150919";
             // 
             // sStrp
             // 

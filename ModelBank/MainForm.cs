@@ -169,7 +169,10 @@ namespace ModelBank
                     tbv[i].MaxLength = int.Parse(tblen[i].Text);        //长度控制
                     //是否为空
                     if (dr[Cfg.sPara[3]].ToString() == "no")
+                    {
                         lb[i].ForeColor = Color.Red;
+                        tbv[i].Enabled = true;
+                    }
                     else if (dr[Cfg.sPara[3]].ToString() == "yes")
                     {
                         lb[i].ForeColor = Color.Black;
