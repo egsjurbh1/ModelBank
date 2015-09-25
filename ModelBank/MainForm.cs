@@ -3,6 +3,8 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text;
+using System.Net;
+using System.Net.Sockets;
 
 namespace ModelBank
 {
@@ -253,6 +255,7 @@ namespace ModelBank
             //合计
             tssLable.Text = "生成buffer成功:" + s.Length.ToString() + "字节"; ;
             tssLable.ForeColor = Color.ForestGreen;
+            bt_sendbank.Enabled = true;
         }
 
         /// <summary>
@@ -281,19 +284,28 @@ namespace ModelBank
             DataTable dtResult = new DataTable(); //结果集
             DataTable dtResult2 = new DataTable(); //结果集2
             DataTable dtResult3 = new DataTable(); //结果集3
-            int custid = int.Parse(tbCustid.Text);
+            int custid = 0;
+            try
+            {
+                custid = int.Parse(tbCustid.Text);
+            }
+            catch
+            {
+                MessageBox.Show("-10002custid配置有误，必须为数字");
+                return;
+            }
 
             bool bSuccess = getuserdata(custid, dbconnect_str, tbdbname.Text, ref dtResult, ref dtResult2, ref dtResult3);
-            if(!bSuccess)
+            if (!bSuccess)
             {
-                MessageBox.Show("-10002未查到客户数据");
+                MessageBox.Show("-10010未查到客户数据");
                 return;
             }
 
             //客户数据写入
-            for(int i = 0; i < Cfg.nParaNum; ++i)
+            for (int i = 0; i < Cfg.nParaNum; ++i)
             {
-                if(lb[i].Text == "b_custname")
+                if (lb[i].Text == "b_custname")
                 {
                     tbv[i].Text = dtResult.Rows[0]["custlname"].ToString().Trim();
                     lb[i].ForeColor = Color.ForestGreen;
@@ -323,7 +335,7 @@ namespace ModelBank
                     string orgid = dtResult.Rows[0]["orgid"].ToString().Trim();
                     string fundid = dtResult.Rows[0]["fundid"].ToString().Trim();
                     string smid = null;
-                    for(int j = 0; j < 10 - fundid.Length; j++)
+                    for (int j = 0; j < 10 - fundid.Length; j++)
                     {
                         smid = smid + "0";
                     }
@@ -338,7 +350,7 @@ namespace ModelBank
                 else if (lb[i].Text == "b_bksno")
                 {
                     Random ran = new Random();
-                    int rkey = ran.Next(1000, 9999);
+                    int rkey = ran.Next(10000, 99999);
                     tbv[i].Text = dtResult3.Rows[0]["sno"].ToString().Trim() + rkey.ToString();
                     lb[i].ForeColor = Color.ForestGreen;
                 }
@@ -346,7 +358,7 @@ namespace ModelBank
                 tssLable.Text = "导入客户数据成功";
                 tssLable.ForeColor = Color.ForestGreen;
             }
-        }
+            }
 
         public bool getuserdata(int custid, string dbconnectstr, string dbname, ref DataTable dt1, ref DataTable dt2, ref DataTable dt3)
         {
@@ -377,6 +389,77 @@ namespace ModelBank
                 return false;
 
             return true;
+        }
+
+        /// <summary>
+        /// 发送银行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bt_sendbank_Click(object sender, EventArgs e)
+        {
+            string sIp = tb_bankip.Text;                    //IP
+            int nPort = Int32.Parse(tb_bankport.Text);      //Port
+
+            //设定服务器IP地址  
+            IPAddress ip = IPAddress.Parse(sIp);
+            Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            try
+            {
+                //连接服务器
+                clientSocket.Connect(new IPEndPoint(ip, nPort));
+                tssLable.Text = "连接服务器成功";
+                tssLable.ForeColor = Color.ForestGreen;
+            }
+            catch
+            {
+                MessageBox.Show("-20001连接服务器失败。");
+                tssLable.Text = "连接服务器失败";
+                tssLable.ForeColor = Color.Red;
+                return;
+            }
+
+            //发送数据
+            try
+            {
+                string sendMessage = rtbresultdata.Text;
+                clientSocket.Send(Encoding.GetEncoding("GB2312").GetBytes(sendMessage));
+                tssLable.Text = "发送消息……";
+                rtb_recvbankdata.Text = "";
+            }
+            catch
+            {
+                clientSocket.Shutdown(SocketShutdown.Both);
+                clientSocket.Close();
+                MessageBox.Show("-20002发送数据失败。");
+                tssLable.Text = "发送数据失败";
+                tssLable.ForeColor = Color.Red;
+                return;
+            }
+
+            //通过clientSocket接收数据
+            byte[] result = new byte[1024];
+            int receiveLength = 0;
+            //接收
+            clientSocket.ReceiveTimeout = 3000;   //设置超时时间3s
+            try
+            {
+                receiveLength = clientSocket.Receive(result);
+                rtb_recvbankdata.Text = Encoding.GetEncoding("GB2312").GetString(result, 0, receiveLength);
+                tssLable.Text = "接收消息成功";
+                tssLable.ForeColor = Color.ForestGreen;
+            }
+            catch(Exception)
+            {
+                tssLable.Text = "接收消息失败：连接超时或其它";
+                tssLable.ForeColor = Color.Red;
+                clientSocket.Close();
+                return;
+            }
+
+            //关闭连接
+            //clientSocket.Shutdown(SocketShutdown.Both);
+            clientSocket.Close();
         }
     }
 }
