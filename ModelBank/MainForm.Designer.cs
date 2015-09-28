@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbPara = new System.Windows.Forms.GroupBox();
             this.tblength24 = new System.Windows.Forms.TextBox();
             this.tblength23 = new System.Windows.Forms.TextBox();
@@ -109,6 +110,12 @@
             this.sStrp = new System.Windows.Forms.StatusStrip();
             this.tssLable = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bt_sendbank = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_bankport = new System.Windows.Forms.TextBox();
+            this.tb_bankip = new System.Windows.Forms.TextBox();
             this.btgetdata = new System.Windows.Forms.Button();
             this.lbcustid = new System.Windows.Forms.Label();
             this.tbCustid = new System.Windows.Forms.TextBox();
@@ -121,20 +128,14 @@
             this.tbdbuserid = new System.Windows.Forms.TextBox();
             this.tbdbname = new System.Windows.Forms.TextBox();
             this.tbDataSource = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tb_bankip = new System.Windows.Forms.TextBox();
-            this.tb_bankport = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.bt_sendbank = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.rtb_recvbankdata = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.gbPara.SuspendLayout();
             this.sStrp.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.gb_dbSet.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.gb_dbSet.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPara
@@ -814,7 +815,7 @@
             this.lbversion.Name = "lbversion";
             this.lbversion.Size = new System.Drawing.Size(113, 12);
             this.lbversion.TabIndex = 30;
-            this.lbversion.Text = "v0.5.0 bulid150925";
+            this.lbversion.Text = "v0.5.1 bulid150928";
             // 
             // sStrp
             // 
@@ -845,6 +846,65 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "获取数据";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.bt_sendbank);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tb_bankport);
+            this.groupBox2.Controls.Add(this.tb_bankip);
+            this.groupBox2.Location = new System.Drawing.Point(13, 277);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 177);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "发送银行";
+            // 
+            // bt_sendbank
+            // 
+            this.bt_sendbank.Enabled = false;
+            this.bt_sendbank.Location = new System.Drawing.Point(63, 124);
+            this.bt_sendbank.Name = "bt_sendbank";
+            this.bt_sendbank.Size = new System.Drawing.Size(75, 23);
+            this.bt_sendbank.TabIndex = 10;
+            this.bt_sendbank.Text = "发送银行";
+            this.bt_sendbank.UseVisualStyleBackColor = true;
+            this.bt_sendbank.Click += new System.EventHandler(this.bt_sendbank_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Port：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "IP：";
+            // 
+            // tb_bankport
+            // 
+            this.tb_bankport.Location = new System.Drawing.Point(76, 79);
+            this.tb_bankport.Name = "tb_bankport";
+            this.tb_bankport.Size = new System.Drawing.Size(100, 21);
+            this.tb_bankport.TabIndex = 1;
+            this.tb_bankport.Text = "6001";
+            // 
+            // tb_bankip
+            // 
+            this.tb_bankip.Location = new System.Drawing.Point(76, 41);
+            this.tb_bankip.Name = "tb_bankip";
+            this.tb_bankip.Size = new System.Drawing.Size(100, 21);
+            this.tb_bankip.TabIndex = 0;
+            this.tb_bankip.Text = "10.189.50.170";
             // 
             // btgetdata
             // 
@@ -929,6 +989,7 @@
             // 
             this.tbdbpassword.Location = new System.Drawing.Point(70, 99);
             this.tbdbpassword.Name = "tbdbpassword";
+            this.tbdbpassword.PasswordChar = '*';
             this.tbdbpassword.Size = new System.Drawing.Size(125, 21);
             this.tbdbpassword.TabIndex = 3;
             this.tbdbpassword.Text = "1234567890";
@@ -956,65 +1017,6 @@
             this.tbDataSource.Size = new System.Drawing.Size(125, 21);
             this.tbDataSource.TabIndex = 0;
             this.tbDataSource.Text = "10.189.50.174";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.bt_sendbank);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.tb_bankport);
-            this.groupBox2.Controls.Add(this.tb_bankip);
-            this.groupBox2.Location = new System.Drawing.Point(13, 277);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 177);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "发送银行";
-            // 
-            // tb_bankip
-            // 
-            this.tb_bankip.Location = new System.Drawing.Point(76, 41);
-            this.tb_bankip.Name = "tb_bankip";
-            this.tb_bankip.Size = new System.Drawing.Size(100, 21);
-            this.tb_bankip.TabIndex = 0;
-            this.tb_bankip.Text = "10.189.50.170";
-            // 
-            // tb_bankport
-            // 
-            this.tb_bankport.Location = new System.Drawing.Point(76, 79);
-            this.tb_bankport.Name = "tb_bankport";
-            this.tb_bankport.Size = new System.Drawing.Size(100, 21);
-            this.tb_bankport.TabIndex = 1;
-            this.tb_bankport.Text = "6001";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "IP：";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Port：";
-            // 
-            // bt_sendbank
-            // 
-            this.bt_sendbank.Enabled = false;
-            this.bt_sendbank.Location = new System.Drawing.Point(63, 124);
-            this.bt_sendbank.Name = "bt_sendbank";
-            this.bt_sendbank.Size = new System.Drawing.Size(75, 23);
-            this.bt_sendbank.TabIndex = 10;
-            this.bt_sendbank.Text = "发送银行";
-            this.bt_sendbank.UseVisualStyleBackColor = true;
-            this.bt_sendbank.Click += new System.EventHandler(this.bt_sendbank_Click);
             // 
             // label7
             // 
@@ -1058,6 +1060,8 @@
             this.Controls.Add(this.rtbresultdata);
             this.Controls.Add(this.bt_GeneBankData);
             this.Controls.Add(this.gbPara);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "ModelBank";
             this.gbPara.ResumeLayout(false);
@@ -1066,10 +1070,10 @@
             this.sStrp.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.gb_dbSet.ResumeLayout(false);
-            this.gb_dbSet.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.gb_dbSet.ResumeLayout(false);
+            this.gb_dbSet.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
